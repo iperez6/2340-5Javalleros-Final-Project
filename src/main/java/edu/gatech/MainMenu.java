@@ -25,6 +25,17 @@ public class MainMenu extends Activity {
         	}
         });
         
+        Button btn2 = (Button) findViewById(R.id.viewAccounts);
+        btn2.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v){
+        	Intent i = new Intent(MainMenu.this, AccountsPageActivity.class);
+        	startActivity(i);
+        		
+        	}
+        		
+        });
+        
+        
 	}
 
 	@Override
@@ -33,5 +44,7 @@ public class MainMenu extends Activity {
 		getMenuInflater().inflate(R.menu.main_menu, menu);
 		return true;
 	}
+	
+	
 
 }
